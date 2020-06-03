@@ -4,6 +4,8 @@ var hbs = require('hbs');
 var utils = require('./utils.js');
 var bodyParser = require('body-parser');
 
+var port = process.env.PORT  || 3000;
+
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -63,6 +65,6 @@ app.post('/weather', (request, response) =>{
     });
 });
 
-app.listen('3000',()=>{
-    console.log('Server is up!')
+app.listen(port,()=>{
+    console.log('Server is up at port' + port)
 })

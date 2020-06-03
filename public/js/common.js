@@ -10,7 +10,7 @@ function getWeatherInfo() {
         latitude: '28.5355',
         longitude: '77.3910'
     };
-    fetch('http://localhost:3000/weather', 
+    fetch('/weather', 
          {
              method:'post',
              headers: {
